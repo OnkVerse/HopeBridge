@@ -1,0 +1,409 @@
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3E7B27 !important;
+    /* Primary Theme Color */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333 !important;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3E7B27 !important;
+    /* Highlight on Hover */
+    transform: translateY(-2px);
+}
+
+/* Dropdown Menu Styling */
+.nav-item.hov {
+    position: relative;
+}
+
+.nav-item.hov .hidden {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-item.hov:hover .hidden {
+    display: block;
+}
+
+.nav-item.hov .hidden li {
+    padding: 8px 15px;
+}
+
+.nav-item.hov .hidden li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-item.hov .hidden li a:hover {
+    color: #3E7B27;
+    /* Highlight on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item.hov .hidden {
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #3E7B27;
+    /* Primary Theme Color */
+    color: white !important;
+    /* Ensure text color is white */
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+/* Container for Charity Information */
+.mt-5 {
+    margin-top: 50px;
+    padding: 40px;
+    background: rgb(252, 252, 252);
+    /* Soft green */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Charity Title */
+h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0b6623;
+    /* Dark green */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Charity Name */
+h6 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1b5e20;
+    /* Deep green */
+    margin-bottom: 20px;
+}
+
+/* Charity Description */
+p {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+footer p {
+    color: white;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Horizontal Line */
+hr {
+    border: 2px solid #388e3c;
+    /* Green line */
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* Donate Button */
+.btn-danger {
+    background: #3E7B27;
+    /* Dark red */
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-danger:hover {
+    background: #123524;
+    /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mt-5 {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h6 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+/* General Styling */
+
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3E7B27;
+}
+
+/* Hero Section */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    color: #3E7B27;
+}
+
+/* Search Bar */
+form input[type="search"] {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #3E7B27;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #3E7B27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3E7B27;
+}
+
+/* Table Styling */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.table th {
+    background-color: #3E7B27;
+    color: white;
+    text-transform: uppercase;
+}
+
+.table td,
+.table th {
+    padding: 15px;
+    text-align: center;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+footer {
+    background-color: #3E7B27;
+    /* Primary Theme Color */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Footer Content */
+footer h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Horizontal Line */
+footer hr {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    margin: 10px auto;
+}
+
+/* Contact & Social Sections */
+footer .col-lg-6 {
+    padding: 20px;
+}
+
+/* Social Media Icons */
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer .social a {
+    color: rgb(11, 11, 11);
+    font-size: 1.8rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+footer .social a:hover {
+    transform: translateY(-3px);
+    color: #f4d03f;
+    /* Gold Effect on Hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    footer .col-lg-6 {
+        border-left: none;
+        text-align: center;
+    }
+}
+
+/* Tablet Screens (Max Width: 992px) */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Reduce logo size */
+    }
+
+    .donations img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+    }
+
+    .donations h3 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+}
+
+/* Mobile Screens (Max Width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; /* Reduce navbar padding */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Center navbar links */
+    }
+
+    .donations {
+        padding: 10px; /* Adjust spacing */
+    }
+
+    .donations h3 {
+        font-size: 1.5rem; /* Smaller headings */
+    }
+
+    .donations img {
+        width: 100%; /* Fully responsive images */
+    }
+
+    .btn {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer .col-lg-6 {
+        border-left: none; /* Remove border on mobile */
+        padding-bottom: 20px;
+    }
+}
+
+/* Small Mobile Screens (Max Width: 576px) */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .donations h3 {
+        font-size: 1.3rem;
+    }
+
+    .donations p {
+        font-size: 0.9rem; /* Smaller text */
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,356 @@
+
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3E7B27 !important; /* Primary Theme Color */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333 !important;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3E7B27 !important; /* Highlight on Hover */
+    transform: translateY(-2px);
+}
+
+/* Dropdown Menu Styling */
+.nav-item.hov {
+    position: relative;
+}
+
+.nav-item.hov .hidden {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-item.hov:hover .hidden {
+    display: block;
+}
+
+.nav-item.hov .hidden li {
+    padding: 8px 15px;
+}
+
+.nav-item.hov .hidden li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-item.hov .hidden li a:hover {
+    color: #3E7B27; /* Highlight on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item.hov .hidden {
+        position: relative;
+        box-shadow: none;
+    }
+}
+ 
+    /*section*/
+    .section-1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/img/charity.jpg') center/cover no-repeat;
+        background: url(../img/mypic.jpg) fixed center;
+        padding: 80px 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .header-text h5 {
+        font-size: 1.2rem;
+        font-weight: 300;
+        max-width: 700px;
+        margin: 0 auto 20px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        background-color: #3E7B27;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+        background-color: #386600;
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /*new styling for boxes*/
+    .section-2 {
+        background-color: #f9f9f9;
+        /* Light background for contrast */
+        padding: 50px 0;
+    }
+
+    .section-2 h1 {
+        font-size: 2.5rem;
+        color: #85A947;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .section-2 .row {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section-2 .col-lg-4 {
+        text-align: center;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-2 .col-lg-4:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-2 img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #3E7B27;
+        margin-bottom: 15px;
+    }
+
+    .section-2 h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .section-2 p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        padding: 0 15px;
+    }
+
+    /*section -3 */
+    /* Section Styling */
+    .mb-5 {
+        padding: 60px 0;
+        background-color: #f4f4f4;
+        /* Light gray background */
+    }
+
+    /* Heading Styling */
+    .third_h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #3E7B27;
+        margin-bottom: 30px;
+    }
+
+    /* Card Styling */
+    .card {
+        width: 100%;
+        max-width: 20rem;
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover Effect */
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image Styling */
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 4px solid #3E7B27;
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Card Title */
+    .card-title {
+        font-size: 1.4rem;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Card Text */
+    .card-text {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    /* Button Styling */
+    .card .btn-light {
+        background-color: #3E7B27;
+        color: white;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card .btn-light:hover {
+        background-color: #2f5e1e;
+        color: #fff;
+    }
+
+    /*For last 'You can also ma...'*/
+    /* Section Styling */
+    .py-5 {
+        background-color: #f9f9f9;
+        /* Light Background */
+        padding: 60px 0;
+    }
+
+    /* Heading Styling */
+    .py-5 h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #3E7B27;
+        margin-bottom: 20px;
+    }
+
+    /* Paragraph Styling */
+    .py-5 p {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+    }
+
+    /* Button Styling */
+    .py-5 .btn {
+        background-color: #3E7B27;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.3s ease-in-out, transform 0.2s;
+    }
+
+    .py-5 .btn:hover {
+        background-color: #2f5e1e;
+        transform: translateY(-3px);
+    }
+
+    /* Fixing Button Link Styling */
+    .py-5 .btn a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .py-5 .btn a:hover {
+        color: white;
+    }
+    /*for footer*/
+
+    footer {
+        background-color: #3E7B27; /* Primary Theme Color */
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    /* Footer Content */
+    footer h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    /* Horizontal Line */
+    footer hr {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 60px;
+        margin: 10px auto;
+    }
+    
+    /* Contact & Social Sections */
+    footer .col-lg-6 {
+        padding: 20px;
+    }
+    
+    /* Social Media Icons */
+    footer .social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    footer .social a {
+        color: white;
+        font-size: 1.8rem;
+        transition: transform 0.3s, color 0.3s;
+    }
+    
+    footer .social a:hover {
+        transform: translateY(-3px);
+        color: #f4d03f; /* Gold Effect on Hover */
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        footer .col-lg-6 {
+            border-left: none;
+            text-align: center;
+        }
+    }
+    
