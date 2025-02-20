@@ -65,15 +65,10 @@
         </div>
     </nav>
 
-    <div class="mt-5 back">
-        <div class="text-center"></div>
-
-    </div>
-
     <section class="mt-5 mb-5">
         <div class="container">
             <form method="POST" action="../php/donation.php">
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-3 mt-3">
 
                     <h2> <?php
                             $cname = $_POST['id'];
@@ -97,8 +92,8 @@
 
                     </div>
 
-                </div>
-                <div class="form-row">
+                 </div>
+                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationServer03">Amount</label>
                         <input type="number" class="form-control " id="validationServer03" placeholder="Amount" name=" amount" required>
