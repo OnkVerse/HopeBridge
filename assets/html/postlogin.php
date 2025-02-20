@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($password === $db_password) {
             $_SESSION['user_id'] = $user_id;
             $_SESSION['email'] = $email;
-            header("Location: about.html");
+            header("Location: ../../index.html");
             exit();
         } else {
             echo "Invalid email or password.";
