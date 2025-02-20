@@ -36,6 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         $_SESSION['message'] = "Registration successful!";
+        $_SESSION['firstname'] = $first_name;
+        $_SESSION['lastname'] = $last_name;
         header("Location: login.php");
         exit();
     } else {
