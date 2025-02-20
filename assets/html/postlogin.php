@@ -41,10 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../../index.php");
             exit();
         } else {
-            echo "Invalid email or password.";
+            echo "<script>alert('Invalid email or password.'); window.location.href = '../../assets/html/login.php';</script>";
+            exit();
         }
     } else {
-        echo "Invalid email or password.";
+        echo "<script>alert('Invalid email or password.'); window.location.href = '../../assets/html/login.php';</script>";
+        exit();
     }
 
     $stmt->close();
