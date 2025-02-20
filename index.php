@@ -92,7 +92,19 @@ session_start();
     <section class="section-1">
         <div class="container-fluid text-center">
             <div class="header-text">
-                <h1> Start making a contribution</h1>
+            <h1>
+                <?php
+                    if (isset($_SESSION['user_id'])) {
+                        if (isset($_SESSION['firstname']) && !empty($_SESSION['firstname'])) {
+                            echo "Welcome, " . $_SESSION['firstname'] . "! Start making a contribution";
+                        } else {
+                            echo "Welcome, " . $_SESSION['email'] . "! Start making a contribution";
+                        }
+                    } else {
+                        echo "Start making a contribution";
+                    }
+                ?>
+            </h1>
                 <h5>
                     Be part of a number of people and start making a change in this world. Change someone's life for
                     better.
