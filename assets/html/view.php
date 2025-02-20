@@ -27,7 +27,7 @@
 <body>
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.html" class="navbar-brand text-dark logo">
+            <a href="../../index.php" class="navbar-brand text-dark logo">
                 Charity
             </a>
 

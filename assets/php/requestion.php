@@ -61,7 +61,7 @@ if ($con->connect_error) {
 
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.html" class="navbar-brand text-dark logo">
+            <a href="../../index.php" class="navbar-brand text-dark logo">
                 Charity
             </a>
 
@@ -127,7 +127,7 @@ if ($con->connect_error) {
     </section>
 
     <div class="container">
-        <a href="../../index.html" class="text-danger">Return To main page</a>
+        <a href="../../index.php" class="text-danger">Return To main page</a>
     </div>
 
 

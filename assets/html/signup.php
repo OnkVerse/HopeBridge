@@ -311,7 +311,7 @@
         </form>
 
         <div class="login">
-            <p>Already have an account? <a href="index.html">Sign in</a></p>
+            <p>Already have an account? <a href="index.php">Sign in</a></p>
         </div>
 
         <div class="decorative-circle circle-1"></div>
