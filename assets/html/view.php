@@ -27,38 +27,21 @@
 <body>
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.php" class="navbar-brand text-dark logo">
-                Charity
+            <a href="" class="navbar-brand text-dark logo">
+             <?php 
+                session_start(); // Start the session
+                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal"; 
+             ?>
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="about.php" class="nav-link">About us</a>
-                    </li>
-                    <li class="nav-item hov">
-                        <a href="donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="donateEdu.php">Education</a>
-                                </li>
-                                <li>
-                                    <a href="../html/donateHealth.php">Health</a>
-                                </li>
-                                <li>
-                                    <a href="donateConst.php">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
 
                     <li class="nav-item">
-                        <a href="request.php" class="nav-link">Request Donation</a>
+                        <a href="insert.php" class="nav-link">Add Donantion</a>
                     </li>
 
                     <li class="nav-item">
