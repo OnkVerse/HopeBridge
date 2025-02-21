@@ -70,10 +70,7 @@ session_start();
                     <li class="nav-item">
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="view.php" class="nav-link">View Donations</a>
-                    </li>
+                    
                     <li class="nav-item">
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <a href="assets/html/logout.php" class="nav-link" 

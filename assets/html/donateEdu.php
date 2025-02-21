@@ -63,9 +63,7 @@ body {
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="view.php" class="nav-link">View Donations</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

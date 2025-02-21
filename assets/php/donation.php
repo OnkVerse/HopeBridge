@@ -101,9 +101,6 @@ if ($conn->connect_error) {
                         <a href="../html/request.php" class="nav-link">Request Donation</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="../html/view.php" class="nav-link">View Donations</a>
-                    </li>
                 </ul>
             </div>
         </div>

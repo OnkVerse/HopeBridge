@@ -64,9 +64,6 @@ session_start();
                     </li>
 
                     <li class="nav-item">
-                        <a href="assets/html/view.php" class="nav-link">View Donations</a>
-                    </li>
-                    <li class="nav-item">
                     <?php if (isset($_SESSION['user_id'])): ?>
                         <a href="assets/html/logout.php" class="nav-link" 
                         style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">

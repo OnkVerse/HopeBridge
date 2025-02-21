@@ -57,9 +57,6 @@
                         <a href="../html/request.html" class="nav-link">Request Donation</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="../html/view.php" class="nav-link">View Donations</a>
-                    </li>
                 </ul>
             </div>
         </div>
