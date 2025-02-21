@@ -40,7 +40,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="assets/html/about.html" class="nav-link">About us</a>
+                        <a href="assets/html/about.php" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item hov">
                         <a href="assets/html/donateEdu.php" class="nav-link">Donate</a>
@@ -94,15 +94,15 @@ session_start();
             <div class="header-text">
             <h1>
                 <?php
-                    if (isset($_SESSION['user_id'])) {
-                        if (isset($_SESSION['firstname']) && !empty($_SESSION['firstname'])) {
-                            echo "Welcome, " . $_SESSION['firstname'] . "! Start making a contribution";
-                        } else {
-                            echo "Welcome, " . $_SESSION['email'] . "! Start making a contribution";
-                        }
+                if (isset($_SESSION['user_id'])) {
+                    if (isset($_SESSION['firstname']) && !empty($_SESSION['firstname'])) {
+                        echo "Welcome, " . $_SESSION['firstname'] . "! Start making a contribution";
                     } else {
-                        echo "Start making a contribution";
+                        echo "Welcome, " . $_SESSION['email'] . "! Start making a contribution";
                     }
+                } else {
+                    echo "Start making a contribution";
+                }
                 ?>
             </h1>
                 <h5>

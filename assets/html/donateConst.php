@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">About us</a>
+                        <a href="about.php" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
@@ -59,6 +61,19 @@
                     <li class="nav-item">
                         <a href="view.php" class="nav-link">View Donations</a>
                     </li>
+                    <li class="nav-item">
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="assets/html/logout.php" class="nav-link" 
+                        style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <a href="assets/html/login.php" class="nav-link" 
+                        style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Login
+                        </a>
+                    <?php endif; ?>
+                    </li>      
                 </ul>
             </div>
         </div>
