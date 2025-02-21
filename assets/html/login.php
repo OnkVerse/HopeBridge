@@ -273,6 +273,10 @@
 
         <div class="signup">
             <p>Don't have an account? <a href="signup.php">Sign up</a></p>
+            <p style="color: red; font-weight: bold;"> 
+                 <a href="adminLogin.php" style="color: red; text-decoration: none;">Admin Login*</a>
+            </p>
+
         </div>
 
         <div class="decorative-circle circle-1"></div>
