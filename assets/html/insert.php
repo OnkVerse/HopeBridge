@@ -1,49 +1,50 @@
 <?php
-session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "charity";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $c_name = $_POST["c_name"];
-    $title = $_POST["title"];
-    $text_desc = $_POST["text_desc"];
-    $code_type = $_POST["code_type"];
-
-    // Handling file upload
-    if (isset($_FILES["img"]) && $_FILES["img"]["error"] == 0) {
-        $img = file_get_contents($_FILES["img"]["tmp_name"]); // Read image as binary
-    } else {
-        echo "<script>alert('Error uploading image!');</script>";
-        exit;
+    session_start();
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "charity";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-
-    // Prepare SQL statement
-    $sql = "INSERT INTO charity (c_name, img, title, text_desc, code_type) VALUES (?, ?, ?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("bsssi", $c_name, $img, $title, $text_desc, $code_type);
-
-    if ($stmt->execute()) {
-        echo "<script>alert('Data inserted successfully!'); window.location.href='inse.php';</script>";
-    } else {
-        echo "<script>alert('Error inserting data!');</script>";
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $c_name = $_POST["c_name"];
+        $title = $_POST["title"];
+        $text_desc = $_POST["text_desc"];
+        $code_type = $_POST["code_type"];
+    
+        // Handling file upload
+        if (isset($_FILES["img"]) && $_FILES["img"]["error"] == 0) {
+            $img = file_get_contents($_FILES["img"]["tmp_name"]); // Read image as binary
+        } else {
+            echo "<script>alert('Error uploading image!');</script>";
+            exit;
+        }
+    
+        // Prepare SQL statement
+        $sql = "INSERT INTO charity (c_name, img, title, text_desc, code_type) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("bsssi", $c_name, $img, $title, $text_desc, $code_type);
+    
+        if ($stmt->execute()) {
+            echo "<script>alert('Data inserted successfully!'); window.location.href='insert.php';</script>";
+        } else {
+            echo "<script>alert('Error inserting data!');</script>";
+        }
+    
+        $stmt->close();
+        $conn->close();
     }
-
-    $stmt->close();
-    $conn->close();
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3bd17392ca.js" crossorigin="anonymous"></script>
@@ -52,9 +53,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Stylish&family=Zen+Antique&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-</head>
-<style>/* General Reset */
-* {
+
+    <title>View Donations</title>
+    <style>
+        * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -72,7 +74,8 @@ body {
 }
 
 /* Container */
-.container {
+.container-2 {
+
     background: #ffffff;
     padding: 40px;
     border-radius: 12px;
@@ -82,7 +85,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.container:hover {
+.container-2:hover {
     transform: translateY(-3px);
 }
 
@@ -178,10 +181,40 @@ input[type="submit"]:hover {
         font-size: 14px;
     }
 }
-
     </style>
+</head>
+<style>
+    
+</style>
 <body>
-    <div class="container">
+    <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
+        <div class="container">
+            <a href="" class="navbar-brand text-dark logo">
+             <?php 
+                
+                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal"; 
+             ?>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a href="insert.php" class="nav-link">Add Donantion</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="view.php" class="nav-link">View Donations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-2">
         <h2>Insert Charity Data</h2>
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
@@ -212,5 +245,6 @@ input[type="submit"]:hover {
             <input type="submit" value="Insert">
         </form>
     </div>
+
 </body>
-</html>
+
