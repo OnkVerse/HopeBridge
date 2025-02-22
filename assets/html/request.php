@@ -44,17 +44,17 @@
                         <a href="about.php" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item hov">
-                        <a href="donateEdu.html" class="nav-link">Donate</a>
+                        <a href="donateEdu.php" class="nav-link">Donate</a>
                         <div class="">
                             <ul class="hidden">
                                 <li>
-                                    <a href="donateEdu.html">Education</a>
+                                    <a href="donateEdu.php">Education</a>
                                 </li>
                                 <li>
-                                    <a href="donateHealth.html">Health</a>
+                                    <a href="donateHealth.php">Health</a>
                                 </li>
                                 <li>
-                                    <a href="donateConst.html">Construction</a>
+                                    <a href="donateConst.php">Construction</a>
                                 </li>
                             </ul>
                         </div>
