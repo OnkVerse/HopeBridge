@@ -57,20 +57,7 @@ session_start();
                     <li class="nav-item">
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
-
-                    <li class="nav-item">
-                    <?php if (isset($_SESSION['user_id'])): ?>
-                        <a href="assets/html/logout.php" class="nav-link" 
-                        style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
-                            Logout
-                        </a>
-                    <?php else: ?>
-                        <a href="assets/html/login.php" class="nav-link" 
-                        style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
-                            Login
-                        </a>
-                    <?php endif; ?>
-                    </li>      
+    
                 </ul>
             </div>
         </div>
