@@ -55,13 +55,13 @@ session_start();
                         <div class="">
                             <ul class="hidden">
                                 <li>
-                                    <a href="donateEdu.html">Education</a>
+                                    <a href="donateEdu.php">Education</a>
                                 </li>
                                 <li>
-                                    <a href="donateHealth.html">Health</a>
+                                    <a href="donateHealth.php">Health</a>
                                 </li>
                                 <li>
-                                    <a href="donateConst.html">Construction</a>
+                                    <a href="donateConst.php">Construction</a>
                                 </li>
                             </ul>
                         </div>
@@ -78,7 +78,7 @@ session_start();
                             Logout
                         </a>
                     <?php else: ?>
-                        <a href="assets/html/login.php" class="nav-link" 
+                        <a href="login.php" class="nav-link" 
                         style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Login
                         </a>
