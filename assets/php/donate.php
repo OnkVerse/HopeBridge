@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require 'env.php';
+// Include the Razorpay PHP library
+require('razorpay-php/Razorpay.php');
+use Razorpay\Api\Api;
+
+// Initialize Razorpay with your key and secret
+$api_key = getenv('RAZORPAY_KEY');
+$api_secret = getenv('RAZORPAY_SECRET');
+
+$api = new Api($api_key, $api_secret);
+// Create an order
+$order = $api->order->create([
+    'amount' => 9900, // amount in paise (100 paise = 1 rupee)
+    'currency' => 'INR',
+    'receipt' => 'order_receipt_12asa3'
+]);
+// Get the order ID
+$order_id = $order->id;
+
+// Set your callback URL
+$callback_url = "http://localhost:8000/success.html";
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +40,41 @@
     <style>
 
     </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        function startPayment() {
+            var amount = document.getElementById('validationServer03').value * 100; // Convert to paise
+            
+            if (!amount || amount < 100) {
+                alert("Please enter a valid amount (minimum ₹1)");
+                return;
+            }
+
+            // Create a new order using an AJAX request
+            fetch("create_order.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ amount: amount })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var options = {
+                    key: "<?php echo $api_key; ?>",
+                    amount: amount,
+                    currency: "INR",
+                    name: "Your Company Name",
+                    description: "Donation Payment",
+                    image: "https://cdn.razorpay.com/logos/GhRQcyean79PqE_medium.png",
+                    order_id: data.order_id,
+                    theme: { "color": "#738276" },
+                    callback_url: "<?php echo $callback_url; ?>"
+                };
+                var rzp = new Razorpay(options);
+                rzp.open();
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
 </head>
 
 <body>
@@ -105,10 +163,11 @@
                         <input type="text" class="form-control " id="validationServer05" placeholder="Phone number" name=" phoneNumber" required>
                     </div>
                 </div>
-
+                <button class="btn btn-danger" type="button" onclick="startPayment()">Pay with Razorpay</button>
                 <button class="btn btn-danger" type="submit">Donate</button>
             </form>
-        </div>
+
+            </div>
 
     </section>
 
@@ -135,7 +194,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></scrip>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/script.js"></script>
 
