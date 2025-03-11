@@ -31,4 +31,4 @@ HopeBridge is a charity donation platform built using **PHP**, enabling users to
 ### Steps to Run  
 1. Clone this repository:  
    ```sh
-   git clone https://github.com/yourusername/hopebridge.git
+   git clone https://github.com/OnkVerse/HopeBridge
