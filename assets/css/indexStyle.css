@@ -116,6 +116,53 @@
         color: inherit;
     }
 
+
+    .ngo-introduction {
+        background-color: #f8f9fa;
+    }
+
+    .ngo-introduction h2 {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .mission-vision {
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        overflow: hidden;
+        padding: 20px;
+        background: #ffffff;
+    }
+
+    .mission, .vision {
+        transition: all 0.3s ease;
+        border: 2px solid #85A947;
+        border-radius: 12px;
+        margin-bottom: 20px;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(133, 169, 71, 0.1);
+    }
+
+    .mission:hover, .vision:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(133, 169, 71, 0.2);
+    }
+
+    .mission h4, .vision h4 {
+        border-bottom: 2px solid #85A947;
+    }
+
+    .text-success {
+        color: #85A947 !important;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+        .mission-vision {
+            margin-top: 2rem;
+        }
+    }
+    
     /*new styling for boxes*/
     .section-2 {
         background-color: #f9f9f9;
@@ -151,11 +198,7 @@
     }
 
     .section-2 img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid #3E7B27;
-        margin-bottom: 15px;
+       
     }
 
     .section-2 h3 {
@@ -183,7 +226,7 @@
     .third_h2 {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #3E7B27;
+        color: #85A947 !important;
         margin-bottom: 30px;
     }
 
@@ -260,10 +303,10 @@
     .py-5 h2 {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #3E7B27;
+        color: #85A947 !important;
         margin-bottom: 20px;
     }
-
+    
     /* Paragraph Styling */
     .py-5 p {
         font-size: 1.2rem;

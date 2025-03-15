@@ -104,42 +104,7 @@ body {
     }
 ?>
 
-    <!-- <section class=" mt-5">
-        <div class="container donations ">
-            <h3 class="text-dark">Uneducated people need your help</h3>
-            <h6>Charity: Educatry</h6>
-            <img class="img-fluid" src="../img/edu1.jpg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ipsa quo iusto a tenetur odit dolor tempore, dolore quisquam sed? Maxime et a ab nihil velit aliquam. Dignissimos, praesentium inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum minus, error ullam, nulla facere consequuntur quod inventore facilis exercitationem hic soluta voluptas. Id rem ad perferendis recusandae ea aperiam!</p>
-            <div class="btn">
-                <a href="../php/donate.php"> Donate</a>
-            </div>
-        </div>
-    </section>
 
-    <section class=" mt-5">
-        <div class="container donations ">
-            <h3 class="text-dark">Help people get their diplomas</h3>
-            <h6>Charity: Educatry</h6>
-            <img class="img-fluid" src="../img/edu2.jpg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ipsa quo iusto a tenetur odit dolor tempore, dolore quisquam sed? Maxime et a ab nihil velit aliquam. Dignissimos, praesentium inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum minus, error ullam, nulla facere consequuntur quod inventore facilis exercitationem hic soluta voluptas. Id rem ad perferendis recusandae ea aperiam!</p>
-            <div class="btn">
-                <a href="../php/donate.php"> Donate</a>
-            </div>
-        </div>
-    </section>
-
-    <section class=" mt-5">
-        <div class="container donations ">
-            <h3 class="text-dark">Get necessarys accessories for students</h3>
-            <h6>Charity: Educatops</h6>
-
-            <img class="img-fluid" src="../img/edu3.jpg" alt="">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ipsa quo iusto a tenetur odit dolor tempore, dolore quisquam sed? Maxime et a ab nihil velit aliquam. Dignissimos, praesentium inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laborum minus, error ullam, nulla facere consequuntur quod inventore facilis exercitationem hic soluta voluptas. Id rem ad perferendis recusandae ea aperiam!</p>
-            <div class="btn">
-                <a href="../php/donate.php"> Donate</a>
-            </div>
-        </div>
-    </section> -->
 
     <footer>
         <div class="container-fluid">
@@ -147,7 +112,7 @@ body {
                 <div class="col-lg-6">
                     <h5>Contact us</h5>
                     <hr>
-                    <p>Phone number: +971 78947084</p>
+                    <p>Phone number: +91 7028030015</p>
                     <p>Email: charityforeveryone@gmail.com</p>
                 </div>
                 <div class="col-lg-6" style="border-left: 1px solid grey;">

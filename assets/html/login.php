@@ -260,13 +260,7 @@
                 </div>
             </div>
 
-            <div class="remember-forgot">
-                <label class="remember">
-                    <input type="checkbox">
-                    <span>Remember me</span>
-                </label>
-                <a href="#" class="forgot-link">Forgot password?</a>
-            </div>
+            
 
             <button type="submit" class="submit-btn">Sign In</button>
         </form>
@@ -274,7 +268,7 @@
         <div class="signup">
             <p>Don't have an account? <a href="signup.php">Sign up</a></p>
             <p style="color: red; font-weight: bold;"> 
-                 <a href="adminLogin.php" style="color: red; text-decoration: none;">Admin Login*</a>
+                 <a href="adminLogin.php" style="color: red; text-decoration: none;">Admin Login</a>
             </p>
 
         </div>

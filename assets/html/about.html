@@ -10,20 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Stylish&family=Zen+Antique&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/indexStyle.css">
 
-    <title>Donate</title>
+    <title>About us</title>
 
     <style>
-
+        .yelow>h2 {
+            color: white;
+            font-size: 6em;
+            text-align: center;
+            margin: auto;
+        }
     </style>
 </head>
 
+
+
 <body>
+
 
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.php" class="navbar-brand text-dark logo">
+            <a href="../../index.html" class="navbar-brand text-dark logo">
                 Charity
             </a>
 
@@ -34,88 +42,62 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about.php" class="nav-link">About us</a>
+                        <a href="#" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item hov">
-                        <a href="../html/donateEdu.php" class="nav-link">Donate</a>
+                        <a href="donateEdu.php" class="nav-link">Donate</a>
                         <div class="">
                             <ul class="hidden">
                                 <li>
-                                    <a href="../html/donateEdu.html">Education</a>
+                                    <a href="donateEdu.html">Education</a>
                                 </li>
                                 <li>
-                                    <a href="../html/donateHealth.html">Health</a>
+                                    <a href="donateHealth.html">Health</a>
                                 </li>
                                 <li>
-                                    <a href="../html/donateConst.html">Construction</a>
+                                    <a href="donateConst.html">Construction</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="nav-item">
-                        <a href="../html/request.html" class="nav-link">Request Donation</a>
+                        <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="view.php" class="nav-link">View Donations</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="mt-5 mb-5">
-        <div class="container">
-            <form method="POST" action="../php/donation.php">
-                <div class="col-md-3 mb-3 mt-3">
 
-                    <h2> <?php
-                            $cname = $_POST['id'];
-                            echo $cname; ?></h2>
-                    <input style="display:none" type="text" name="cname" value <?php echo '=' . $cname . '' ?>>
+    <br> <br>
 
 
-                </div>
-
-
-
-                <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationServer01">First name</label>
-                        <input type="text" class="form-control" id="validationServer01" placeholder="First name" name=" firstName" required>
-
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationServer02">Last name</label>
-                        <input type="text" class="form-control" id="validationServer02" placeholder="Last name" name=" lastName" required>
-
-                    </div>
-
-                 </div>
-                 <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                        <label for="validationServer03">Amount</label>
-                        <input type="number" class="form-control " id="validationServer03" placeholder="Amount" name=" amount" required>
-
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationServer04">Email</label>
-                        <input type="text" class="form-control" id="validationServer04" placeholder="Email" name=" email" required>
-                    </div>
-                    <div class="col-md-3 mb-3">
-                        <label for="validationServer05">Phone Number</label>
-                        <input type="text" class="form-control " id="validationServer05" placeholder="Phone number" name=" phoneNumber" required>
-                    </div>
-                </div>
-
-                <button class="btn btn-danger" type="submit">Donate</button>
-            </form>
+    <section class="back-3">
+        <div class="yelow">
+            <h2>About Us</h2>
         </div>
-
     </section>
 
 
-
+    <section>
+        <div class="container">
+            <p class="lead p-5">
+                We recognize the **unique value** of children in our community and the urgent need for infrastructure improvements in various regions. Our mission is to expand and enhance our services, making them more accessible to ensure a **better quality of life** for all. 
+    
+                We are deeply concerned about the rising prevalence of **special needs** among children and young adults. Addressing this issue requires **immediate action** at multiple levels—including nurseries, schools, universities, and workplaces—to ensure that these individuals receive the **support and opportunities** needed to become active, contributing members of society. 
+    
+                By fostering inclusivity and accessibility, we aim to create a **healthier, more productive, and compassionate community** for future generations.
+            </p>
+        </div>
+    </section>
+    
     <footer>
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <div class="row">
                 <div class="col-lg-6">
                     <h5>Contact us</h5>
@@ -126,7 +108,7 @@
                 <div class="col-lg-6" style="border-left: 1px solid grey;">
                     <h5>Social media</h5>
                     <div class="social mt-5">
-                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brand fa-facebook"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                         <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                         <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
@@ -137,8 +119,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="../js/script.js"></script>
 
+    <script>
+        $(document).ready(function() {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function() {
+
+                /* Check the location of each desired element */
+                $('.card').each(function(i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 750);
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
 
 </body>
 

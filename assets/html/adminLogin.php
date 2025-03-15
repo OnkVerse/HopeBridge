@@ -302,13 +302,7 @@ $conn->close();
                 </div>
             </div>
 
-            <div class="remember-forgot">
-                <label class="remember">
-                    <input type="checkbox">
-                    <span>Remember me</span>
-                </label>
-                <a href="#" class="forgot-link">Forgot password?</a>
-            </div>
+           
 
             <button type="submit" class="submit-btn">Sign In</button>
         </form>

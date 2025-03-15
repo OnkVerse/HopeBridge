@@ -99,32 +99,302 @@ session_start();
         </div>
     </section>
 
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- [Previous head content remains the same] -->
+    <style>
+        .section-padding {
+            padding: 20px 0;
+        }
+
+        .section-title {
+            color: #85A947;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #85A947;
+            margin: 15px auto;
+        }
+
+        .card-custom {
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(133, 169, 71, 0.2);
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #85A947;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #85A947;
+        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #3E7B27;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .achievement-card {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .partner-logo {
+            height: 200px;
+            object-fit: contain;
+           
+            transition: filter 0.3s ease;
+            border-radius: 50%;
+            border: 4px solid #3E7B27;
+            border-radius: 50%;
+            margin: 30px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+   
+ 
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h2 class="section-title">Welcome to Charity</h2>
+                    <p class="lead">
+                        Since 2017, we've been dedicated to making a positive impact in communities across the nation. 
+                        Through education, healthcare, and infrastructure development, we work tirelessly to create 
+                        lasting change and build a better future for all.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <i class="fas fa-graduation-cap fa-3x mb-3" style="color: #85A947"></i>
+                        <h4>Education Support</h4>
+                        <p>Providing educational resources, scholarships, and infrastructure to empower future generations.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <i class="fas fa-heartbeat fa-3x mb-3" style="color: #85A947"></i>
+                        <h4>Healthcare Initiatives</h4>
+                        <p>Ensuring access to quality healthcare services and medical support for communities in need.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <i class="fas fa-home fa-3x mb-3" style="color: #85A947"></i>
+                        <h4>Infrastructure Development</h4>
+                        <p>Building and improving community infrastructure for sustainable development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2017 - Foundation</h4>
+                    <p>Established with a vision to create positive change in communities.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2018 - First Major Project</h4>
+                    <p>Launched our first educational support program reaching 500 students.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2020 - Expansion</h4>
+                    <p>Extended our services to healthcare and infrastructure development.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2022 - Milestone Achievement</h4>
+                    <p>Successfully completed 100+ projects across multiple sectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <h3>2800+</h3>
+                        <p>Lives Impacted</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <h3>₹1.3cr+</h3>
+                        <p>Funds Raised</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <h3>180+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="achievement-card">
+                        <h3>25+</h3>
+                        <p>Cities Reached</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Our Leadership Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Team Member">
+                        <h4>John Doe</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Team Member">
+                        <h4>Anastasia lea</h4>
+                        <p>Operations Director</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Team Member">
+                        <h4>Mark Lee</h4>
+                        <p>Program Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Partner 1" class="partner-logo">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://randomuser.me/api/portraits/women/90.jpg" alt="Partner 2" class="partner-logo">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://randomuser.me/api/portraits/men/51.jpg" alt="Partner 3" class="partner-logo">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="Partner 4" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section>
         <div class="container">
             <p class="lead p-5">
-                We recognize the **unique value** of children in our community and the urgent need for infrastructure
+                We recognize the unique value of children in our community and the urgent need for infrastructure
                 improvements in various regions. Our mission is to expand and enhance our services, making them more
-                accessible to ensure a **better quality of life** for all.
-
-                We are deeply concerned about the rising prevalence of **special needs** among children and young
-                adults. Addressing this issue requires **immediate action** at multiple levels—including nurseries,
-                schools, universities, and workplaces—to ensure that these individuals receive the **support and
-                opportunities** needed to become active, contributing members of society.
-
-                By fostering inclusivity and accessibility, we aim to create a **healthier, more productive, and
-                compassionate community** for future generations.
+                accessible to ensure a better quality of life for all. We are deeply concerned about the rising prevalence of special needs among children and young
+                adults. Addressing this issue requires immediate action at multiple levels—including nurseries,
+                schools, universities, and workplaces—to ensure that these individuals receive the support and
+                opportunities needed to become active, contributing members of society. By fostering inclusivity and accessibility, we aim to create a healthier, more productive, and
+                compassionate community for future generations.
             </p>
         </div>
     </section>
-
+    
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Join Our Mission</h2>
+            <p class="lead mb-4">Together, we can make a difference in the lives of those who need it most.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="donateEdu.php" class="btn btn-success px-4 py-2">Donate Now</a>
+                <a href="request.php" class="btn btn-outline-success px-4 py-2">Request Help</a>
+            </div>
+        </div>
+    </section>
+ </body>
+</html>
     <footer>
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-lg-6">
                     <h5>Contact us</h5>
                     <hr>
-                    <p>Phone number: +971 78947084</p>
+                    <p>Phone number: +91 7028030015</p>
                     <p>Email: charityforeveryone@gmail.com</p>
                 </div>
                 <div class="col-lg-6" style="border-left: 1px solid grey;">
