@@ -52,38 +52,26 @@ session_start();
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="donateEdu.php">Education</a>
-                                </li>
-                                <li>
-                                    <a href="donateHealth.php">Health</a>
-                                </li>
-                                <li>
-                                    <a href="donateConst.php">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
+                        
                     </li>
 
                     <li class="nav-item">
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
-                    
+
                     <li class="nav-item">
                     <?php if (isset($_SESSION['user_id'])): ?>
-                        <a href="assets/html/logout.php" class="nav-link" 
+                        <a href="assets/html/logout.php" class="nav-link"
                         style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Logout
                         </a>
                     <?php else: ?>
-                        <a href="login.php" class="nav-link" 
+                        <a href="login.php" class="nav-link"
                         style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Login
                         </a>
                     <?php endif; ?>
-                    </li>    
+                    </li>
                 </ul>
             </div>
         </div>
@@ -191,7 +179,7 @@ session_start();
         .partner-logo {
             height: 200px;
             object-fit: contain;
-           
+
             transition: filter 0.3s ease;
             border-radius: 50%;
             border: 4px solid #3E7B27;
@@ -199,13 +187,13 @@ session_start();
             margin: 30px;
         }
 
-      
+
     </style>
 </head>
 
 <body>
-   
- 
+
+
 
     <section class="section-padding">
         <div class="container">
@@ -213,8 +201,8 @@ session_start();
                 <div class="col-md-8 offset-md-2 text-center">
                     <h2 class="section-title">Welcome to Charity</h2>
                     <p class="lead">
-                        Since 2017, we've been dedicated to making a positive impact in communities across the nation. 
-                        Through education, healthcare, and infrastructure development, we work tirelessly to create 
+                        Since 2017, we've been dedicated to making a positive impact in communities across the nation.
+                        Through education, healthcare, and infrastructure development, we work tirelessly to create
                         lasting change and build a better future for all.
                     </p>
                 </div>
@@ -222,7 +210,7 @@ session_start();
         </div>
     </section>
 
-   
+
     <section class="section-padding bg-light">
         <div class="container">
             <h2 class="section-title">What We Do</h2>
@@ -375,7 +363,7 @@ session_start();
             </p>
         </div>
     </section>
-    
+
     <section class="section-padding">
         <div class="container text-center">
             <h2 class="section-title">Join Our Mission</h2>

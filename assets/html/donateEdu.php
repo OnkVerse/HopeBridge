@@ -44,19 +44,6 @@ body {
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="#">Education</a>
-                                </li>
-                                <li>
-                                    <a href="donateHealth.php">Health</a>
-                                </li>
-                                <li>
-                                    <a href="donateConst.php">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
 
                     <li class="nav-item">

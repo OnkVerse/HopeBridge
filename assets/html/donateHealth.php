@@ -38,19 +38,6 @@
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="donateEdu.php">Education</a>
-                                </li>
-                                <li>
-                                    <a href="#">Health</a>
-                                </li>
-                                <li>
-                                    <a href="donateConst.php">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
 
                     <li class="nav-item">
@@ -131,7 +118,7 @@
                 </div>
                 <div class="col-lg-6" style="border-left: 1px solid grey;">
                     <h5>Social media</h5>
-                 
+
                 </div>
             </div>
         </div>

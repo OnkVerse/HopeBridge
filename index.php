@@ -44,19 +44,7 @@ session_start();
                     </li>
                     <li class="nav-item hov">
                         <a href="assets/html/donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="assets/html/donateEdu.php">Education</a>
-                                </li>
-                                <li>
-                                    <a href="assets/html/donateHealth.php">Health</a>
-                                </li>
-                                <li>
-                                    <a href="assets/html/donateConst.php">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
+                       
                     </li>
 
                     <li class="nav-item">

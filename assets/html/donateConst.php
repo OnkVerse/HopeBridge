@@ -40,24 +40,11 @@ session_start();
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
-                        <div class="">
-                            <ul class="hidden">
-                                <li>
-                                    <a href="donateEdu.php">Education</a>
-                                </li>
-                                <li>
-                                    <a href="donateHealth.php">Health</a>
-                                </li>
-                                <li>
-                                    <a href="#">Construction</a>
-                                </li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
-    
+
                 </ul>
             </div>
         </div>
