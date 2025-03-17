@@ -18,19 +18,19 @@
 
     <title>View Donations</title>
     <style>
-        
+
     </style>
 </head>
 <style>
-    
+
 </style>
 <body>
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
             <a href="" class="navbar-brand text-dark logo">
-             <?php 
+             <?php
                 session_start(); // Start the session
-                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal"; 
+                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal";
              ?>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,6 +46,26 @@
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">View Donations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="showrequests.php" class="nav-link">Donor Requests</a>
+                    </li>
+                      <li class="nav-item">
+                        <a href="studentRequest.php" class="nav-link">Student Request's</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <?php if (isset($_SESSION['admin_id'])): ?>
+                        <a href="logout.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <a href="assets/html/adminlogin.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Login
+                        </a>
+                    <?php endif; ?>
                     </li>
                 </ul>
             </div>
@@ -70,7 +90,7 @@
                 </tr>
             </thead>
             <?php
-            $query = 'SELECT donation.firstName, donation.lastName, donation.amount, charity.c_name 
+            $query = 'SELECT donation.firstName, donation.lastName, donation.amount, charity.c_name
                     FROM donation INNER JOIN charity ON donation.charity_id = charity.id';
             $result2 = mysqli_query($con, $query);
             $queryResults = mysqli_num_rows($result2);
@@ -78,12 +98,12 @@
             if($queryResults > 0){
             while ($row = mysqli_fetch_array($result2)) {
 
-                    
-                    
+
+
                     ?>
-            
+
             <tr>
-                
+
                 <td><?php
 
                 echo $row['firstName']
@@ -102,7 +122,7 @@
                 ?> </td>
                 </tr>
                 <?php
-            
+
         }
     }
         ?>
@@ -110,4 +130,3 @@
     </div>
 
 </body>
-

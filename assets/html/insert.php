@@ -4,18 +4,18 @@
     $username = "root";
     $password = "";
     $dbname = "charity";
-    
+
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $c_name = $_POST["c_name"];
         $title = $_POST["title"];
         $text_desc = $_POST["text_desc"];
         $code_type = $_POST["code_type"];
-    
+
         // Handling file upload
         if (isset($_FILES["img"]) && $_FILES["img"]["error"] == 0) {
             $img = file_get_contents($_FILES["img"]["tmp_name"]); // Read image as binary
@@ -23,18 +23,18 @@
             echo "<script>alert('Error uploading image!');</script>";
             exit;
         }
-    
+
         // Prepare SQL statement
         $sql = "INSERT INTO charity (c_name, img, title, text_desc, code_type) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("bsssi", $c_name, $img, $title, $text_desc, $code_type);
-    
+
         if ($stmt->execute()) {
             echo "<script>alert('Data inserted successfully!'); window.location.href='insert.php';</script>";
         } else {
             echo "<script>alert('Error inserting data!');</script>";
         }
-    
+
         $stmt->close();
         $conn->close();
     }
@@ -184,15 +184,15 @@ input[type="submit"]:hover {
     </style>
 </head>
 <style>
-    
+
 </style>
 <body>
     <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
             <a href="" class="navbar-brand text-dark logo">
-             <?php 
-                
-                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal"; 
+             <?php
+
+                echo isset($_SESSION["admin_name"]) ? "Welcome, " . htmlspecialchars($_SESSION["admin_name"])."!" : "Admin Portal";
              ?>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -208,6 +208,25 @@ input[type="submit"]:hover {
 
                     <li class="nav-item">
                         <a href="view.php" class="nav-link">View Donations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="showrequests.php" class="nav-link">Donor Requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="studentRequest.php" class="nav-link">Student Request's</a>
+                    </li>
+                                        <li class="nav-item">
+                    <?php if (isset($_SESSION['admin_id'])): ?>
+                        <a href="logout.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <a href="assets/html/adminlogin.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Login
+                        </a>
+                    <?php endif; ?>
                     </li>
                 </ul>
             </div>
@@ -247,4 +266,3 @@ input[type="submit"]:hover {
     </div>
 
 </body>
-

@@ -82,6 +82,37 @@
                     </label>
                 </div>
 
+
+
+                <div class="form-group row" style="margin-bottom: 15px;">
+                    <label for="email" style="width: 100%; font-weight: bold;">
+                        Email
+                        <input id="email" class="form-control form-control-lg" type="text" name="email" style="border: 2px solid #2c8777; border-radius: 5px;">
+                    </label>
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 15px;">
+                    <label for="mob" style="width: 100%; font-weight: bold;">
+                        Mobile Number
+                        <input id="mob" class="form-control form-control-lg" type="text" name="mob" style="border: 2px solid #2c8777; border-radius: 5px;">
+                    </label>
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 15px;">
+                    <label for="address" style="width: 100%; font-weight: bold;">
+                        Address
+                        <input id="address" class="form-control form-control-lg" type="text" name="address" style="border: 2px solid #2c8777; border-radius: 5px;">
+                    </label>
+                </div>
+
+                <div class="form-group row" style="margin-bottom: 15px;">
+                    <label for="image" style="width: 100%; font-weight: bold;">
+                        Upload Adhar Card*
+                        <input id="image" class="form-control form-control-lg" type="file" name="image" style="border: 2px solid #2c8777; border-radius: 5px;">
+                    </label>
+                </div>
+
+
                 <div class="form-group row" style="margin-bottom: 15px;">
                     <label for="type" style="width: 100%; font-weight: bold;">
                         Request Type
