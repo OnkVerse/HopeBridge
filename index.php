@@ -44,7 +44,7 @@ session_start();
                     </li>
                     <li class="nav-item hov">
                         <a href="assets/html/donateEdu.php" class="nav-link">Donate</a>
-                       
+
                     </li>
 
                     <li class="nav-item">
@@ -178,7 +178,7 @@ session_start();
 
     <section class="  mb-5">
         <div class="container ">
-            <h2 class="text-center third_h2">Different ways you can help</h2>
+            <h2 class="text-center third_h2">You genuinely want help ?</h2>
             <div class="d-flex justify-content-center">
                 <div class="row g-4 mt-4">
                     <div class="col-lg-4">
@@ -187,7 +187,7 @@ session_start();
                             <div class="card-body">
                                 <h5 class="card-title">Educational charities</h5>
                                 <p class="card-text">Your donation to educational institutions helps provide quality education, resources, and opportunities to underprivileged students, empowering them to build a brighter future.</p>
-                                <a href="assets/html/donateEdu.php" class="btn btn-light">Go to Education</a>
+                                <a href="assets/html/donationSeeker.php" class="btn btn-light">fill form</a>
                             </div>
                         </div>
                     </div>
