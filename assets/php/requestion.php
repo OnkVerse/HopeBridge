@@ -1,32 +1,66 @@
 <?php
 
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$desc = $_POST["desc"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Database connection
+    $con = new mysqli('localhost', 'root', '', 'charity');
+    if ($con->connect_error) {
+        die("Connection Failed: " . $con->connect_error);
+    }
+
+    // Retrieve form data
+    $fname = $_POST["fname"];
+    $lname = $_POST["lname"];
+    $email = $_POST["email"];
+    $mob = $_POST["mob"];
+    $address = $_POST["address"];
+    $desc = $_POST["desc"];
+
+    // Determine request type code
+    $type = $_POST["type"];
+    switch ($type) {
+        case "Education":
+            $code = 1;
+            break;
+        case "Health":
+            $code = 2;
+            break;
+        default:
+            $code = 3;
+    }
+
+    // Handle file upload
+    $imageName = "";
+    if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
+        $targetDir = "uploads/"; // Ensure this directory exists and has write permissions
+        $imageName = basename($_FILES['image']['name']);
+        $targetFilePath = $targetDir . $imageName;
+        $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+
+        // Allowed file types
+        $allowedTypes = ["jpg", "jpeg", "png", "pdf"];
+        if (in_array($fileType, $allowedTypes)) {
+            if (!move_uploaded_file($_FILES['image']['tmp_name'], $targetFilePath)) {
+                die("Error uploading file.");
+            }
+        } else {
+            die("Invalid file format. Only JPG, JPEG, PNG, and PDF allowed.");
+        }
+    }
 
 
-if ($_POST["type"] == "Education") {
+    // Prepare and execute SQL statement
+    $stmt = $con->prepare("INSERT INTO request (fname, lname, email, mob, address, description, code, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssis", $fname, $lname, $email, $mob, $address, $desc, $code, $imageName);
 
-    $code = 1;
-} else if ($_POST["type"] == "Health") {
-    $code = 2;
-} else {
-    $code = 3;
-}
-
-$con = new mysqli('localhost', 'root', '', 'charity');
-
-if ($con->connect_error) {
-    die("Connection Failed : " . $conn->connect->error);
-} else {
-    $stmt = $con->prepare("insert into request(fname,  lname, description,code) values(?, ?, ?,?)");
-    $stmt->bind_param("sssi", $fname,  $lname, $desc, $code);
-    $stmt->execute();
+    if ($stmt->execute()) {
+        echo "Form submitted successfully.";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
 
     $stmt->close();
     $con->close();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -118,6 +152,8 @@ if ($con->connect_error) {
                 echo "<br>";
                 echo 'description: ' . $desc;
                 ?></p>
+        <p>We'll Notify you via <b>email/Mobile number</b>, when your request approved!</p>
+        <p>Thank you!</p>
 
         </div>
 
@@ -134,7 +170,7 @@ if ($con->connect_error) {
 
 
 
-    
+
 
     <script src="../js/script.js"></script>
 
