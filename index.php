@@ -65,17 +65,17 @@ session_start();
 
                     <li class="nav-item">
                     <?php if (isset($_SESSION['user_id'])): ?>
-                        <a href="assets/html/logout.php" class="nav-link" 
+                        <a href="assets/html/logout.php" class="nav-link"
                         style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Logout
                         </a>
                     <?php else: ?>
-                        <a href="assets/html/login.php" class="nav-link" 
+                        <a href="assets/html/login.php" class="nav-link"
                         style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Login
                         </a>
                     <?php endif; ?>
-                    </li>                   
+                    </li>
                 </ul>
             </div>
         </div>
@@ -98,13 +98,12 @@ session_start();
                         echo "Welcome, " . $_SESSION['email'] . "! Start making a contribution";
                     }
                 } else {
-                    echo "Start making a contribution";
+                    echo "This is an educational charity website.";
                 }
                 ?>
             </h1>
                 <h5>
-                Welcome to Charity NGO, where every action counts towards building a better future. Together, we work to make a meaningful difference in the lives of those in need. Join us in our mission to create lasting change through compassion, innovation, and collaboration. Thank you for being a part of this journey!
-
+                Welcome to Charity NGO, an educatory charity where every action counts towards building a better future. Together, we work to make a meaningful difference in the lives of those in need. Join us in our mission to create lasting change through compassion, innovation, and collaboration. Thank you for being a part of this journey!
                 </h5>
                 <div class="btn btn-light text-light"> <a href="assets/html/donateEdu.php" style="text-decoration:none">
                         Donate</a></div>
@@ -192,34 +191,16 @@ session_start();
     <section class="  mb-5">
         <div class="container ">
             <h2 class="text-center third_h2">Different ways you can help</h2>
-            <div class="row g-4 mt-4">
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img src="assets/img/medical.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Medical charities</h5>
-                            <p class="card-text">Your donation to medical causes helps provide life-saving treatments, medications, and care to those in need. Together, we can improve health outcomes and save countless lives in underserved communities.</p>
-                            <a href="assets/html/donateEdu.php" class="btn btn-light">Go to Education</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img src="assets/img/health.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Health Charities</h5>
-                            <p class="card-text">By donating to educational initiatives, you empower individuals with the knowledge and skills needed to create better futures. Your support helps break the cycle of poverty and unlocks opportunities for generations to come.</p>
-                            <a href="assets/html/donateHealth.php" class="btn btn-light">Go to Health</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 20rem;">
-                        <img src="assets/img/construction.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Construction charities</h5>
-                            <p class="card-text">Your contribution to construction efforts builds strong, safe, and infrastructure for communities in need. Together, we provide essential housing, schools, and health facilities that uplift entire communities.</p>
-                            <a href="assets/html/donateConst.php" class="btn btn-light">Go to Construction</a>
+            <div class="d-flex justify-content-center">
+                <div class="row g-4 mt-4">
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 20rem;">
+                            <img src="assets/img/medical.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Educational charities</h5>
+                                <p class="card-text">Your donation to educational institutions helps provide quality education, resources, and opportunities to underprivileged students, empowering them to build a brighter future.</p>
+                                <a href="assets/html/donateEdu.php" class="btn btn-light">Go to Education</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -230,7 +211,7 @@ session_start();
     <section class="section-5   ">
 
     </section>
-    
+
         <!-- After "Different ways you can help" section -->
     <section class="section-5"></section>
 
@@ -238,7 +219,7 @@ session_start();
     <section class="impact-section py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5" style="color: #85A947">Our Impact & Success Stories</h2>
-            
+
             <!-- Statistics Row -->
             <div class="row mb-5">
                 <div class="col-md-3 text-center mb-4">
@@ -289,7 +270,7 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <div class="success-story p-4 bg-white rounded shadow-sm">
                         <div class="story-header mb-3">
-                            <span class="badge bg-danger mb-2">Healthcare</span>
+                            <span class="badge bg-danger mb-2">Education</span>
                             <h5 style="color: #85A947">Medical Camp Initiative</h5>
                         </div>
                         <p class="text-muted">Organized free medical camps in underserved communities, providing healthcare services to over 1000 individuals.</p>
@@ -301,7 +282,7 @@ session_start();
                 <div class="col-md-4 mb-4">
                     <div class="success-story p-4 bg-white rounded shadow-sm">
                         <div class="story-header mb-3">
-                            <span class="badge bg-warning mb-2">Construction</span>
+                            <span class="badge bg-warning mb-2">Education</span>
                             <h5 style="color: #85A947">Community Center</h5>
                         </div>
                         <p class="text-muted">Built a multipurpose community center serving as a hub for educational programs and community gatherings.</p>
@@ -313,7 +294,7 @@ session_start();
             </div>
 
             <!-- Call to Action -->
-           
+
         </div>
     </section>
 
@@ -413,7 +394,7 @@ session_start();
 
     <section class="section-7"> </section>
 
-    
+
 
     <footer>
         <div class="container-fluid ">
