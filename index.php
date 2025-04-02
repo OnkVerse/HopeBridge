@@ -46,6 +46,9 @@ session_start();
                         <a href="assets/html/donateEdu.php" class="nav-link">Donate</a>
 
                     </li>
+                    <li class="nav-item hov">
+                        <a href="assets/html/showdonations.php" class="nav-link">View donations</a>
+                    </li>
 
                     <li class="nav-item">
                         <a href="assets/html/request.php" class="nav-link">Request Donation</a>

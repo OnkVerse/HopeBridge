@@ -34,9 +34,9 @@ session_start();
 <body>
 
 
-    <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
+</nav>  <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.php" class="navbar-brand text-dark logo">
+            <a href="#" class="navbar-brand text-dark logo">
                 Charity
             </a>
 
@@ -48,11 +48,14 @@ session_start();
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About us</a>
+                        <a href="about.php" class="nav-link">About us</a>
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
-                        
+
+                    </li>
+                    <li class="nav-item hov">
+                        <a href="showdonations.php" class="nav-link">View donations</a>
                     </li>
 
                     <li class="nav-item">
@@ -66,7 +69,7 @@ session_start();
                             Logout
                         </a>
                     <?php else: ?>
-                        <a href="login.php" class="nav-link"
+                        <a href="assets/html/login.php" class="nav-link"
                         style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
                             Login
                         </a>

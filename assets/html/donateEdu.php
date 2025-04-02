@@ -27,13 +27,14 @@ body {
 </style>
 <body>
 
-    <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
+</nav>  <nav id="#navbar" class="navbar navbar-expand-lg bg-white py-0 fixed-top">
         <div class="container">
-            <a href="../../index.php" class="navbar-brand text-dark logo">
+            <a href="#" class="navbar-brand text-dark logo">
                 Charity
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -44,13 +45,29 @@ body {
                     </li>
                     <li class="nav-item hov">
                         <a href="donateEdu.php" class="nav-link">Donate</a>
+
+                    </li>
+                    <li class="nav-item hov">
+                        <a href="showdonations.php" class="nav-link">View donations</a>
                     </li>
 
                     <li class="nav-item">
                         <a href="request.php" class="nav-link">Request Donation</a>
                     </li>
 
-
+                    <li class="nav-item">
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <a href="assets/html/logout.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #DC2626; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <a href="assets/html/login.php" class="nav-link"
+                        style="border-radius: 20px;color: white !important; background-color: #16A34A; padding: 8px 15px; text-align: center; text-decoration: none; display: inline-block;">
+                            Login
+                        </a>
+                    <?php endif; ?>
+                    </li>
                 </ul>
             </div>
         </div>
