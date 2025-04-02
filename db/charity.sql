@@ -36,6 +36,24 @@ CREATE TABLE `charity` (
   `code_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE Donations (
+    donation_id INT AUTO_INCREMENT PRIMARY KEY,
+    charity_name VARCHAR(255) NOT NULL,
+    charity_info TEXT,
+    mobile_no VARCHAR(15) NOT NULL,
+    address TEXT NOT NULL,
+    donation_amount DECIMAL(10,2) NOT NULL,
+    request_button VARCHAR(255) DEFAULT 'http://localhost/charity-website/assets/html/assets/html/request.php'
+);
+
+INSERT INTO Donations (charity_name, charity_info, mobile_no, address, donation_amount, request_button) 
+VALUES 
+('Helping Hands', 'Provides food and shelter to homeless people', '9876543210', '123 Street, Pune', 5000.00, 'http://localhost/charity-website/assets/html/assets/html/request.php'),
+('Save the Kids', 'Supports education for underprivileged children', '9123456789', '45 Avenue, Mumbai', 7500.00, 'http://localhost/charity-website/assets/html/assets/html/request.php'),
+('Green Earth', 'Focuses on environmental conservation and tree planting', '8899001122', '78 Eco Park, Bangalore', 6000.00, 'http://localhost/charity-website/assets/html/assets/html/request.php'),
+('Animal Care', 'Rescues and shelters stray animals', '9988776655', '10 Pet Street, Delhi', 4000.00, 'http://localhost/charity-website/assets/html/assets/html/request.php'),
+('Medical Aid', 'Provides medical assistance to the needy', '9112233445', '99 Health Road, Hyderabad', 10000.00, 'http://localhost/charity-website/assets/html/assets/html/request.php');
+
 --
 -- Dumping data for table `charity`
 --
