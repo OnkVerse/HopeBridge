@@ -182,7 +182,12 @@
                         <textarea class="form-control form-control-lg" name="desc" id="description" cols="30" rows="5" style="border: 2px solid #2c8777; border-radius: 5px;"></textarea>
                     </label>
                 </div>
-
+                <div class="form-group row" style="margin-bottom: 15px;">
+                    <label for="amount" style="width: 100%; font-weight: bold;">
+                        Amount
+                        <input id="amount" class="form-control form-control-lg" type="text" name="amount" style="border: 2px solid #2c8777; border-radius: 5px;">
+                    </label>
+                </div>
                 <button id="submit" class="btn btn-success mt-2" type="submit" style="width: 100%; padding: 12px; font-size: 18px; font-weight: bold; background: #3E7B27; border: none; border-radius: 5px;">
                     Submit Form
                 </button>

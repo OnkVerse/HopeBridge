@@ -157,6 +157,7 @@ CREATE TABLE `request` (
   `email` varchar(100) NOT NULL,
   `mob` varchar(15) NOT NULL,
   `address` varchar(255) NOT NULL,
+   `amount` DECIMAL(10, 2) NOT NULL,
   `image` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

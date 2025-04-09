@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $mob = $_POST["mob"];
     $address = $_POST["address"];
+    $amount = $_POST["amount"];
     $desc = $_POST["desc"];
 
     // Determine request type code
@@ -49,8 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Prepare and execute SQL statement
-    $stmt = $con->prepare("INSERT INTO request (fname, lname, email, mob, address, description, code, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssis", $fname, $lname, $email, $mob, $address, $desc, $code, $imageName);
+    $stmt = $con->prepare("INSERT INTO request (fname, lname, email, mob, address,amount, description, code, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssis", $fname, $lname, $email, $mob, $address,$amount, $desc, $code, $imageName);
 
     if ($stmt->execute()) {
         echo "Form submitted successfully.";

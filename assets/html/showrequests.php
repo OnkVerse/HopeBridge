@@ -154,6 +154,7 @@ $result = mysqli_query($con, $query);
             <th scope="col">Description</th>
             <th scope="col">Aadhaar Card</th>
             <th scope="col">Action</th>
+            <th scope="col">Amount</th>
         </tr>
     </thead>
     <tbody>
@@ -166,6 +167,7 @@ $result = mysqli_query($con, $query);
                 <td><?php echo htmlspecialchars($row['address']); ?></td>
                 <td><?php echo htmlspecialchars($row['code']); ?></td>
                 <td><?php echo htmlspecialchars($row['description']); ?></td>
+                <td><?php echo htmlspecialchars($row['amount']); ?></td>
 
                   <td>
                     <img src="<?php echo $row['image']; ?>" alt="Aadhar Card" style="width: 100px; height: 100px; object-fit: cover;">
